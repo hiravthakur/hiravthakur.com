@@ -1,3 +1,5 @@
+
+
 * {
   box-sizing: border-box;
 }
@@ -8,100 +10,152 @@ html {
 
 body {
   margin: 0;
-  background: #d6e8ff;
-  color: #000000;
+  padding: 0;
 
   font-family: Tahoma, Verdana, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.4;
 
-  background-image:
-    linear-gradient(to bottom, #bcdcff 0%, #eaf4ff 45%, #c5e0ff 100%);
+  color: #000000;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #7bb7ff 0%,
+      #a8d1ff 25%,
+      #d7ebff 60%,
+      #b8d9ff 100%
+    );
+
   background-attachment: fixed;
 }
 
-/* Main desktop-style window */
+
+/* ------------------------------
+   Main Window
+------------------------------ */
+
 .container {
-  width: min(820px, calc(100% - 32px));
-  margin: 40px auto;
+  width: min(840px, calc(100% - 24px));
 
-  background: #ffffff;
+  margin: 28px auto;
 
-  border: 1px solid #003c74;
-  border-radius: 7px 7px 4px 4px;
+  background: #ece9d8;
+
+  border: 2px solid #0054e3;
+  border-radius: 8px 8px 4px 4px;
 
   box-shadow:
     0 0 0 1px #7aa7d9,
-    4px 4px 14px rgba(0, 0, 0, 0.25);
+    5px 5px 15px rgba(0, 0, 0, 0.35);
 
   overflow: hidden;
 }
 
-/* XP-style title bar */
-.header {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(
-    to bottom,
-    #3d95ff 0%,
-    #0057d9 45%,
-    #0047b7 100%
-  );
 
-  border-bottom: 1px solid #00327a;
+/* ------------------------------
+   Header / XP Title Bar
+------------------------------ */
+
+.header {
+  position: relative;
+
+  margin: 0;
+  padding-top: 28px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #3b8df2 0%,
+      #1267dc 40%,
+      #0054c9 70%,
+      #003f9c 100%
+    );
+
+  border-bottom: 1px solid #00317d;
 }
 
-/* Fake window title bar */
 .header::before {
   content: "Hirav Thakur - Personal Website";
 
-  display: block;
+  position: absolute;
+  top: 5px;
+  left: 9px;
 
-  padding: 5px 10px;
+  color: #ffffff;
 
-  color: white;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
   font-size: 13px;
   font-weight: bold;
 
-  text-shadow: 1px 1px 1px #003a80;
+  text-shadow: 1px 1px 1px #003071;
 }
 
-/* Main header content */
+.header::after {
+  content: "—  □  ×";
+
+  position: absolute;
+  top: 3px;
+  right: 8px;
+
+  color: #ffffff;
+
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+
+  letter-spacing: 4px;
+}
+
 .intro {
-  margin: 0 7px 7px;
-  padding: 22px 22px 18px;
+  margin: 0 6px 6px;
+
+  padding: 20px;
 
   background: #ffffff;
 
-  border: 1px solid #7f9db9;
+  border:
+    1px solid #7f9db9;
+
   border-radius: 2px;
 }
+
+
+/* ------------------------------
+   Name + Subtitle
+------------------------------ */
 
 h1 {
   margin: 0 0 4px;
 
   font-family: Tahoma, Verdana, Arial, sans-serif;
 
-  color: #003399;
-  font-size: 28px;
+  font-size: 27px;
   font-weight: bold;
+
+  color: #003399;
 
   text-shadow: 1px 1px 0 #dbe9ff;
 }
 
 .subtitle {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
 
-  color: #444444;
-  font-size: 14px;
+  color: #333333;
+
+  font-size: 12px;
 }
 
-/* Link toolbar */
+
+/* ------------------------------
+   Toolbar Links
+------------------------------ */
+
 .links {
   margin: 0;
-  padding-top: 12px;
+  padding-top: 10px;
 
-  border-top: 1px solid #d0d0d0;
+  border-top: 1px solid #c8c8c8;
 }
 
 .links span {
@@ -114,65 +168,102 @@ h1 {
   margin: 3px 4px 3px 0;
   padding: 4px 10px;
 
+  min-width: 70px;
+
+  text-align: center;
+
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+
   color: #000000;
   text-decoration: none;
 
-  background: linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    #ece9d8 50%,
-    #d6d3c6 100%
-  );
+  background:
+    linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      #f7f5ee 35%,
+      #e3e1d5 60%,
+      #c9c6b8 100%
+    );
 
   border: 1px solid #7f9db9;
   border-radius: 3px;
 
   box-shadow:
     inset 1px 1px 0 #ffffff,
-    inset -1px -1px 0 #c0c0c0;
+    inset -1px -1px 0 #a7a7a7;
 }
 
 .links a:hover {
-  background: linear-gradient(
-    to bottom,
-    #fff7d1 0%,
-    #ffdf85 100%
-  );
+  background:
+    linear-gradient(
+      to bottom,
+      #fffbe8 0%,
+      #ffe7a3 50%,
+      #ffc861 100%
+    );
 
   border-color: #e68b2c;
 }
 
-/* Content area */
-section {
-  margin: 14px;
-  padding: 0;
+.links a:active {
+  background: #d6d3c6;
 
-  border: 1px solid #7f9db9;
+  box-shadow:
+    inset 1px 1px 2px #888888;
+}
+
+
+/* ------------------------------
+   Sections
+------------------------------ */
+
+section {
+  margin: 12px;
 
   background: #ffffff;
+
+  border: 1px solid #7f9db9;
 
   box-shadow:
     inset 1px 1px 0 #ffffff;
 }
 
-/* XP group-box headers */
+
+/* ------------------------------
+   Section Headers
+------------------------------ */
+
 h2 {
   margin: 0;
   padding: 5px 8px;
 
-  background: linear-gradient(
-    to bottom,
-    #eef5ff 0%,
-    #d6e7fb 100%
-  );
-
-  border-bottom: 1px solid #7f9db9;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
 
   color: #003399;
 
-  font-size: 14px;
-  font-weight: bold;
+  background:
+    linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      #eef5ff 18%,
+      #d8e9ff 55%,
+      #b8d2f2 100%
+    );
+
+  border-bottom: 1px solid #7f9db9;
+
+  text-shadow: 1px 1px 0 #ffffff;
 }
+
+
+/* ------------------------------
+   Section Content
+------------------------------ */
 
 section > p,
 section > .item {
@@ -190,17 +281,34 @@ section > .item:last-child {
   margin-bottom: 12px;
 }
 
+
+/* ------------------------------
+   Typography
+------------------------------ */
+
 h3 {
   margin: 0;
 
-  color: #000080;
-
-  font-size: 14px;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 13px;
   font-weight: bold;
+
+  color: #000080;
 }
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+
+/* ------------------------------
+   Classic Links
+------------------------------ */
 
 a {
   color: #0000ee;
+  text-decoration: underline;
 }
 
 a:visited {
@@ -211,7 +319,15 @@ a:hover {
   color: #ff0000;
 }
 
-/* Experience/research entries */
+a:active {
+  color: #ff0000;
+}
+
+
+/* ------------------------------
+   Research / Experience Entries
+------------------------------ */
+
 .item {
   margin-top: 12px;
   margin-bottom: 18px;
@@ -219,71 +335,154 @@ a:hover {
 
 .item + .item {
   padding-top: 12px;
-  border-top: 1px dotted #999999;
+
+  border-top: 1px dotted #808080;
 }
 
 .item-header {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+
   gap: 16px;
 }
 
 .item-header span {
   color: #555555;
 
-  font-size: 12px;
+  font-size: 11px;
+
+  white-space: nowrap;
 }
 
 .meta {
-  margin: 2px 0 6px;
+  margin: 2px 0 7px;
 
   color: #555555;
 
-  font-size: 12px;
+  font-size: 11px;
   font-style: italic;
 }
 
-p {
-  margin-top: 0;
+
+/* ------------------------------
+   Fake XP Inner Panel Effect
+------------------------------ */
+
+.item,
+section > p {
+  padding: 2px;
 }
 
-/* Footer styled like XP status bar */
+
+/* ------------------------------
+   Footer / XP Status Bar
+------------------------------ */
+
 footer {
-  margin-top: 18px;
+  margin-top: 16px;
+
   padding: 5px 10px;
 
-  background: #ece9d8;
+  background:
+    linear-gradient(
+      to bottom,
+      #f6f4eb 0%,
+      #e5e2d5 100%
+    );
 
   border-top: 1px solid #aca899;
 
   color: #555555;
 
-  font-size: 11px;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 10px;
 }
 
 footer p {
   margin: 0;
 }
 
-/* Optional scrollbar-ish XP feel */
+
+/* ------------------------------
+   Selection
+------------------------------ */
+
 ::selection {
   background: #316ac5;
-  color: white;
+  color: #ffffff;
 }
 
-/* Mobile */
+
+/* ------------------------------
+   Scrollbar styling
+   Works in WebKit browsers
+------------------------------ */
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ece9d8;
+
+  border-left: 1px solid #aca899;
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      to right,
+      #dcecff,
+      #9fc5f3
+    );
+
+  border: 1px solid #7f9db9;
+
+  box-shadow:
+    inset 1px 1px 0 #ffffff;
+}
+
+::-webkit-scrollbar-button {
+  background: #ece9d8;
+  border: 1px solid #aca899;
+}
+
+
+/* ------------------------------
+   Mobile
+------------------------------ */
+
 @media (max-width: 600px) {
+
+  body {
+    font-size: 12px;
+  }
+
   .container {
-    width: calc(100% - 16px);
-    margin: 8px auto;
+    width: calc(100% - 10px);
+
+    margin: 5px auto;
   }
 
   .intro {
-    padding: 16px;
+    padding: 14px;
   }
 
   h1 {
-    font-size: 23px;
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 12px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  .links a {
+    margin-bottom: 6px;
   }
 
   .item-header {
@@ -292,10 +491,13 @@ footer p {
 
   .item-header span {
     display: block;
+
     margin-top: 2px;
   }
 
-  .links a {
-    margin-bottom: 6px;
+  .header::after {
+    font-size: 12px;
+
+    letter-spacing: 2px;
   }
 }
