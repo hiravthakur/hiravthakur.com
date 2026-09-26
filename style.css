@@ -1,0 +1,219 @@
+/* ------------------------------
+   Base
+------------------------------ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #222222;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+
+/* ------------------------------
+   Layout
+------------------------------ */
+
+.container {
+  width: min(760px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 70px 0 50px;
+}
+
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+.header {
+  margin-bottom: 60px;
+}
+
+h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 2.6rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+
+  color: #111111;
+}
+
+.subtitle {
+  margin: 6px 0 8px;
+
+  color: #555555;
+  font-size: 1.05rem;
+}
+
+
+/* ------------------------------
+   Links
+------------------------------ */
+
+a {
+  color: #174ea6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.links {
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
+
+.links span {
+  margin: 0 5px;
+  color: #999999;
+}
+
+
+/* ------------------------------
+   Sections
+------------------------------ */
+
+section {
+  margin-bottom: 48px;
+}
+
+h2 {
+  margin: 0 0 18px;
+
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid #dddddd;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 1.35rem;
+  font-weight: 500;
+
+  color: #111111;
+}
+
+h3 {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: #1a1a1a;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+
+/* ------------------------------
+   Entries
+------------------------------ */
+
+.item {
+  margin-bottom: 28px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.item-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.item-header span {
+  color: #777777;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.meta {
+  margin: 2px 0 7px;
+
+  color: #777777;
+
+  font-size: 0.92rem;
+  font-style: italic;
+}
+
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+footer {
+  margin-top: 70px;
+  padding-top: 20px;
+
+  border-top: 1px solid #eeeeee;
+
+  color: #888888;
+  font-size: 0.82rem;
+}
+
+
+/* ------------------------------
+   Mobile
+------------------------------ */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: calc(100% - 32px);
+    padding-top: 40px;
+  }
+
+  h1 {
+    font-size: 2.15rem;
+  }
+
+  .header {
+    margin-bottom: 45px;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  .item-header {
+    display: block;
+  }
+
+  .item-header span {
+    display: block;
+    margin-top: 2px;
+  }
+}
