@@ -1,7 +1,3 @@
-/* ------------------------------
-   Base
------------------------------- */
-
 * {
   box-sizing: border-box;
 }
@@ -12,200 +8,282 @@ html {
 
 body {
   margin: 0;
-  background: #ffffff;
-  color: #222222;
+  background: #d6e8ff;
+  color: #000000;
 
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Helvetica,
-    Arial,
-    sans-serif;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
 
-  font-size: 16px;
-  line-height: 1.65;
+  background-image:
+    linear-gradient(to bottom, #bcdcff 0%, #eaf4ff 45%, #c5e0ff 100%);
+  background-attachment: fixed;
 }
 
-
-/* ------------------------------
-   Layout
------------------------------- */
-
+/* Main desktop-style window */
 .container {
-  width: min(760px, calc(100% - 40px));
-  margin: 0 auto;
-  padding: 70px 0 50px;
+  width: min(820px, calc(100% - 32px));
+  margin: 40px auto;
+
+  background: #ffffff;
+
+  border: 1px solid #003c74;
+  border-radius: 7px 7px 4px 4px;
+
+  box-shadow:
+    0 0 0 1px #7aa7d9,
+    4px 4px 14px rgba(0, 0, 0, 0.25);
+
+  overflow: hidden;
 }
 
-
-/* ------------------------------
-   Header
------------------------------- */
-
+/* XP-style title bar */
 .header {
-  margin-bottom: 60px;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to bottom,
+    #3d95ff 0%,
+    #0057d9 45%,
+    #0047b7 100%
+  );
+
+  border-bottom: 1px solid #00327a;
+}
+
+/* Fake window title bar */
+.header::before {
+  content: "Hirav Thakur - Personal Website";
+
+  display: block;
+
+  padding: 5px 10px;
+
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+
+  text-shadow: 1px 1px 1px #003a80;
+}
+
+/* Main header content */
+.intro {
+  margin: 0 7px 7px;
+  padding: 22px 22px 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #7f9db9;
+  border-radius: 2px;
 }
 
 h1 {
-  margin: 0;
+  margin: 0 0 4px;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
 
-  font-size: 2.6rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  color: #003399;
+  font-size: 28px;
+  font-weight: bold;
 
-  color: #111111;
+  text-shadow: 1px 1px 0 #dbe9ff;
 }
 
 .subtitle {
-  margin: 6px 0 8px;
+  margin: 0 0 14px;
 
-  color: #555555;
-  font-size: 1.05rem;
+  color: #444444;
+  font-size: 14px;
 }
 
-
-/* ------------------------------
-   Links
------------------------------- */
-
-a {
-  color: #174ea6;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
+/* Link toolbar */
 .links {
-  margin-top: 12px;
-  font-size: 0.95rem;
+  margin: 0;
+  padding-top: 12px;
+
+  border-top: 1px solid #d0d0d0;
 }
 
 .links span {
-  margin: 0 5px;
-  color: #999999;
+  display: none;
 }
 
+.links a {
+  display: inline-block;
 
-/* ------------------------------
-   Sections
------------------------------- */
+  margin: 3px 4px 3px 0;
+  padding: 4px 10px;
 
+  color: #000000;
+  text-decoration: none;
+
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ece9d8 50%,
+    #d6d3c6 100%
+  );
+
+  border: 1px solid #7f9db9;
+  border-radius: 3px;
+
+  box-shadow:
+    inset 1px 1px 0 #ffffff,
+    inset -1px -1px 0 #c0c0c0;
+}
+
+.links a:hover {
+  background: linear-gradient(
+    to bottom,
+    #fff7d1 0%,
+    #ffdf85 100%
+  );
+
+  border-color: #e68b2c;
+}
+
+/* Content area */
 section {
-  margin-bottom: 48px;
+  margin: 14px;
+  padding: 0;
+
+  border: 1px solid #7f9db9;
+
+  background: #ffffff;
+
+  box-shadow:
+    inset 1px 1px 0 #ffffff;
 }
 
+/* XP group-box headers */
 h2 {
-  margin: 0 0 18px;
+  margin: 0;
+  padding: 5px 8px;
 
-  padding-bottom: 5px;
+  background: linear-gradient(
+    to bottom,
+    #eef5ff 0%,
+    #d6e7fb 100%
+  );
 
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #7f9db9;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  color: #003399;
 
-  font-size: 1.35rem;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: bold;
+}
 
-  color: #111111;
+section > p,
+section > .item {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+section > p:first-of-type,
+section > .item:first-of-type {
+  margin-top: 12px;
+}
+
+section > p:last-child,
+section > .item:last-child {
+  margin-bottom: 12px;
 }
 
 h3 {
   margin: 0;
 
-  font-size: 1rem;
-  font-weight: 600;
+  color: #000080;
 
-  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 14px;
+a {
+  color: #0000ee;
 }
 
+a:visited {
+  color: #551a8b;
+}
 
-/* ------------------------------
-   Entries
------------------------------- */
+a:hover {
+  color: #ff0000;
+}
 
+/* Experience/research entries */
 .item {
-  margin-bottom: 28px;
+  margin-top: 12px;
+  margin-bottom: 18px;
 }
 
-.item:last-child {
-  margin-bottom: 0;
+.item + .item {
+  padding-top: 12px;
+  border-top: 1px dotted #999999;
 }
 
 .item-header {
   display: flex;
-  align-items: baseline;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
 }
 
 .item-header span {
-  color: #777777;
-  font-size: 0.9rem;
-  white-space: nowrap;
+  color: #555555;
+
+  font-size: 12px;
 }
 
 .meta {
-  margin: 2px 0 7px;
+  margin: 2px 0 6px;
 
-  color: #777777;
+  color: #555555;
 
-  font-size: 0.92rem;
+  font-size: 12px;
   font-style: italic;
 }
 
-
-/* ------------------------------
-   Footer
------------------------------- */
-
-footer {
-  margin-top: 70px;
-  padding-top: 20px;
-
-  border-top: 1px solid #eeeeee;
-
-  color: #888888;
-  font-size: 0.82rem;
+p {
+  margin-top: 0;
 }
 
+/* Footer styled like XP status bar */
+footer {
+  margin-top: 18px;
+  padding: 5px 10px;
 
-/* ------------------------------
-   Mobile
------------------------------- */
+  background: #ece9d8;
 
+  border-top: 1px solid #aca899;
+
+  color: #555555;
+
+  font-size: 11px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Optional scrollbar-ish XP feel */
+::selection {
+  background: #316ac5;
+  color: white;
+}
+
+/* Mobile */
 @media (max-width: 600px) {
-
   .container {
-    width: calc(100% - 32px);
-    padding-top: 40px;
+    width: calc(100% - 16px);
+    margin: 8px auto;
+  }
+
+  .intro {
+    padding: 16px;
   }
 
   h1 {
-    font-size: 2.15rem;
-  }
-
-  .header {
-    margin-bottom: 45px;
-  }
-
-  section {
-    margin-bottom: 40px;
+    font-size: 23px;
   }
 
   .item-header {
@@ -215,5 +293,9 @@ footer {
   .item-header span {
     display: block;
     margin-top: 2px;
+  }
+
+  .links a {
+    margin-bottom: 6px;
   }
 }
